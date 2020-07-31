@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="card">
+    <h3 class="card-header">Consumer Detail</h3>
+    <div class="card-body">
+      <div *ngIf="consumer">
+        <h5>Id : {{ consumer.id }}</h5>
+        <h5>Name : {{ consumer.name }}</h5>
+        <h5>Email : {{ consumer.email }}</h5>
+          <div class="mt-3">
+            <h5
+              *ngIf="isDelete"
+              class="btn btn-danger mr-2"
+              routerLink="/consumers"
+              (click)="onDelete()"
+            >
+              Delete
+            </h5>
+            <h5
+              class="btn btn-dark"
+              routerLink="/consumers"
+            >
+              Back
+            </h5>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
